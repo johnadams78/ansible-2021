@@ -1,11 +1,14 @@
----
+--- #Connection Block
 - name: install package
   host: ubuntu
   become: true
   become_method: sudo
   user: ec2-user
   tasks:
-    - name: Install telnet
+
+
+     #Task Block
+    - name: Install mariadb
       ansible.builtin.package:
-        name: telnet
+        name: mariadb
         state: present
