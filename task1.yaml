@@ -7,8 +7,8 @@
   tasks:
 
 
-     #Task Block
-    - name: Install mariadb
-      ansible.builtin.package:
+    #Task Block
+   - name: Install mariadb
+     ansible.builtin.package:
         name: mariadb
         state: present
