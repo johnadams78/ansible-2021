@@ -1,11 +1,11 @@
 ---
-me: install package
-host: ubuntu
-become: true
-become_method: sudo
-user: ec2-user
-tasks:
-    name: Install telnet
-    ansible.builtin.package:
-      name: telnet
-      state: present
+- name: install package
+  host: ubuntu
+  become: true
+  become_method: sudo
+  user: ec2-user
+  tasks:
+    - name: Install telnet
+      ansible.builtin.package:
+        name: telnet
+        state: present
