@@ -3,7 +3,7 @@ me: install package
 host: ubuntu
 become: true
 become_method: sudo
-user: ubuntu
+user: ec2-user
 tasks:
     name: Install telnet
     ansible.builtin.package:
