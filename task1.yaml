@@ -1,6 +1,6 @@
 --- #Connection Block
 - name: install packages
-  host: ubuntu
+  host: ansible-ubuntu
   become: true
   become_method: sudo
   user: ec2-user
