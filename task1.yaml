@@ -8,7 +8,7 @@
 
 
     #Task Block
-   - name: Install mariadb
+   - name: Install telnet
      ansible.builtin.package:
-        name: mariadb
+        name: telnet
         state: present
