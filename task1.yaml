@@ -1,3 +1,4 @@
+---
 me: install package
 host: ubuntu
 become: true
@@ -8,4 +9,3 @@ tasks:
     ansible.builtin.package:
       name: telnet
       state: present
-      
