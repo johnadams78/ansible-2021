@@ -1,14 +1,15 @@
---- #Connection Block
-- name: install packages
-  host: all
+--- # Connection
+- name: Install Wordpress
+  hosts: all
   become: true
-  become_method: sudo
+  become_method: sudo 
   user: ec2-user
-  tasks:
+
 
 
     #Task Block
-   - name: Install telnet
-     ansible.builtin.package:
-        name: telnet
-        state: present
+     - name: Start DB server
+    systemd: 
+      name: mariadb 
+      state: restarted
+      enabled: tru
