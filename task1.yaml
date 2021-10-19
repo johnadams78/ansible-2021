@@ -1,5 +1,5 @@
 --- # Connection
-- name: Install Wordpress
+- name: Install mariadb
   hosts: all
   become: true
   become_method: sudo 
@@ -8,8 +8,10 @@
 
 
     #Task Block
-     - name: Start DB server
-    systemd: 
-      name: mariadb 
-      state: restarted
-      enabled: tru
+  - name: Install mariadb
+    when: ( ansible_facts['distribution'] == "Amazon" or ansible_facts['distribution'] == "CentOS" )
+    package: 
+      name: "{{ item }}" 
+      state: present
+    with_items:
+    - mariad
