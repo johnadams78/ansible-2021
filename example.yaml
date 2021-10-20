@@ -11,7 +11,7 @@
 
 
   # Task block
-  - name: Install telnet 
+  - name: Install wget
     ansible.builtin.package:
-      name: telnet
+      name: wget
       state: absent            #present       #latest
