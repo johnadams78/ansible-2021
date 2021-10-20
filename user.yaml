@@ -1,0 +1,15 @@
+--- # Connection
+- name: Install packages
+  hosts: localhost
+  become: true
+  become_method: sudo 
+  user: ec2-user
+  tasks:
+  - name: Add users
+    ansible.builtin.user:
+      name: "{{ item }}""
+      state:  present
+    with_loops:
+    - johnd
+    - lisa
+    - ben 
